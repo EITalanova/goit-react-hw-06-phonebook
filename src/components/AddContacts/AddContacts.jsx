@@ -1,5 +1,9 @@
 import css from './AddContacts.module.css';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+// import addContact 
+
+// const dispatch = useDispatch();
 
 function AddContacts({ onSubmit }) {
   const [name, setName] = useState('');
@@ -7,7 +11,6 @@ function AddContacts({ onSubmit }) {
 
   const handleChange = e => {
     const { name, value } = e.currentTarget;
-
     switch (name) {
       case 'name':
         setName(value);
@@ -23,6 +26,7 @@ function AddContacts({ onSubmit }) {
   const handleSubmit = e => {
     e.preventDefault();
     const newContact = { name: name, number: number };
+// dispatch(addContact(newContact))
 
     onSubmit(newContact);
     resetForm();
@@ -67,6 +71,5 @@ function AddContacts({ onSubmit }) {
     </form>
   );
 }
-// export default AddContacts;
 
 export default AddContacts;

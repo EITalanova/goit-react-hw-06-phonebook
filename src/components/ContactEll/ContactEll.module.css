@@ -12,8 +12,11 @@
   border-radius: 50%;
   background-color: rgb(240, 6, 6);
   outline: none;
+  border: none;
   color: #fff;
   width: 15px;
   height: 15px;
+  
   margin-left: 15px;
+  cursor: pointer;
 }
