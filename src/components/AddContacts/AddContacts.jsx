@@ -67,5 +67,6 @@ function AddContacts({ onSubmit }) {
     </form>
   );
 }
+// export default AddContacts;
 
 export default AddContacts;
