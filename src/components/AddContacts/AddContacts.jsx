@@ -1,11 +1,13 @@
-import css from './AddContacts.module.css';
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-// import addContact 
+import { useDispatch, useSelector } from 'react-redux';
+import { addContact } from 'redux/contactsSlice';
+import { getContacts } from 'redux/selectors';
 
-// const dispatch = useDispatch();
+import css from './AddContacts.module.css';
 
-function AddContacts({ onSubmit }) {
+function AddContacts() {
+  const dispatch = useDispatch();
+  const contacts = useSelector(getContacts);
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
@@ -25,11 +27,30 @@ function AddContacts({ onSubmit }) {
 
   const handleSubmit = e => {
     e.preventDefault();
-    const newContact = { name: name, number: number };
-// dispatch(addContact(newContact))
 
-    onSubmit(newContact);
+    const nameVerification = contacts.find(
+      contact => contact.name.toLowerCase() === name.toLowerCase()
+    );
+    if (nameVerification) {
+      alert(`${name} is already in contacts!`);
+    } else {
+      dispatch(addContact(name, number));
+    }
     resetForm();
+    // {
+
+    // for (let contact of contacts) {
+    //   if (contact.name === name) {
+    //     alert(`${name} is already in contacts!`);
+    //     return true;
+    //   }
+    //   // const newContact = { name: name, number: number };
+
+    //   // onSubmit(newContact);
+    //   dispatch(addContact(name, number));
+    //   resetForm();
+    // }
+    // };
   };
 
   const resetForm = () => {
