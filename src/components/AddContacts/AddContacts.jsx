@@ -37,20 +37,6 @@ function AddContacts() {
       dispatch(addContact(name, number));
     }
     resetForm();
-    // {
-
-    // for (let contact of contacts) {
-    //   if (contact.name === name) {
-    //     alert(`${name} is already in contacts!`);
-    //     return true;
-    //   }
-    //   // const newContact = { name: name, number: number };
-
-    //   // onSubmit(newContact);
-    //   dispatch(addContact(name, number));
-    //   resetForm();
-    // }
-    // };
   };
 
   const resetForm = () => {

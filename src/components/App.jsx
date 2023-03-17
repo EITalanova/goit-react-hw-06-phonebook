@@ -1,3 +1,4 @@
+
 import AddContacts from './AddContacts/AddContacts';
 import ContactList from './ContactList/ContactList';
 import ContactEll from './ContactEll/ContactEll';
@@ -7,13 +8,12 @@ function App() {
   return (
     <div
       style={{
-        height: '100vh',
         display: 'flex',
-        // justifyContent: 'center',
         flexDirection: 'column',
         alignItems: 'center',
         fontSize: 10,
         color: '#010101',
+    
       }}
     >
       <h1>Phonebook</h1>
