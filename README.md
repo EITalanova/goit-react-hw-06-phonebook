@@ -1,7 +1,6 @@
-# React homework template
-
-Этот проект был создан при помощи
-[Create React App](https://github.com/facebook/create-react-app). Для знакомства
-и настройки дополнительных возможностей
-[обратись к документации](https://facebook.github.io/create-react-app/docs/getting-started).
-
+# Phonebook
+Application for storing and editing contacts.<br>
+The project was created as part of the Full stack developer (GOIT) courses. <br>
+<b>Name:</b> Phonebook<br>
+<b>Project theme:</b> Asynchrony and date, promises
+<b>Technologies:</b> React, redux
